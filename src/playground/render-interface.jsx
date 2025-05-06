@@ -138,7 +138,7 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'TurboWarp Desktop'}
                     </a>
-                    <a href="https://packager.turbowarp.org/">
+                    <a href="http://localhost:8947/">
                         {/* Do not translate */}
                         {'TurboWarp Packager'}
                     </a>
@@ -200,6 +200,23 @@ class Interface extends React.Component {
     componentDidUpdate (prevProps) {
         if (prevProps.isLoading && !this.props.isLoading) {
             loadServiceWorker();
+        }
+    }
+    componentDidMount () {
+        // 在編輯器載入時自動載入指定的擴充套件
+        if (this.props.vm && this.props.vm.extensionManager) {
+            // 在這裡設定你想要自動載入的擴充套件列表
+            const extensionsToLoad = [
+                'https://extensions.turbowarp.org/text.js',
+                'https://extensions.turbowarp.org/fetch.js',
+                'https://extensions.turbowarp.org/utilities.js',
+                'https://extensions.turbowarp.org/ZXMushroom63/searchApi.js'
+            ];
+            
+            // 依序載入每個擴充套件
+            for (const url of extensionsToLoad) {
+                this.props.vm.extensionManager.loadExtensionURL(url);
+            }
         }
     }
     handleUpdateProjectTitle (title, isDefault) {

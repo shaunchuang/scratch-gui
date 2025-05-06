@@ -43,7 +43,8 @@ const messages = defineMessages({
 
 const Packager = () => (
     <a
-        href="https://packager.turbowarp.org"
+        //href="https://packager.turbowarp.org"
+        href="http://localhost:8947"
         target="_blank"
         rel="noopener noreferrer"
     >
