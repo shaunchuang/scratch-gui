@@ -207,11 +207,10 @@ class Interface extends React.Component {
         if (this.props.vm && this.props.vm.extensionManager) {
             // 在這裡設定你想要自動載入的擴充套件列表
             const extensionsToLoad = [
-                'http://127.0.0.1:7000/File/api/file/path/extension/DtxIntegrationExtension.js',
-                'http://127.0.0.1:7000/File/api/file/path/extension/DialogExtension.js',
-                'http://127.0.1:7000/File/api/file/path/extension/MovementExtension.js',
+                'http://140.96.170.75:8261/File/api/file/path/extension/DtxIntegrationExtension.js',
+                'http://140.96.170.75:8261/File/api/file/path/extension/DialogExtension.js',
+                'http://140.96.170.75:8261/File/api/file/path/extension/MovementExtension.js',
                 'https://extensions.turbowarp.org/lab/text.js'
-
             ];
             
             // 依序載入每個擴充套件
