@@ -138,7 +138,7 @@ const Footer = () => (
                         {/* Do not translate */}
                         {'TurboWarp Desktop'}
                     </a>
-                    <a href="http://localhost:8947/">
+                    <a href="http://140.96.170.75:8271/">
                         {/* Do not translate */}
                         {'TurboWarp Packager'}
                     </a>
