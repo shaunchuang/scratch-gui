@@ -5,7 +5,7 @@ import log from './log';
 import {getIsShowingProject} from '../reducers/project-state';
 
 //const PACKAGER_URL = 'https://packager.turbowarp.org';
-const PACKAGER_URL = 'http://localhost:8947';
+const PACKAGER_URL = 'http://140.96.170.75:8271';
 const PACKAGER_ORIGIN = PACKAGER_URL;
 
 const PackagerIntegrationHOC = function (WrappedComponent) {
